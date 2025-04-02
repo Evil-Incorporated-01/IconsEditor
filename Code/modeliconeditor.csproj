@@ -3,15 +3,15 @@
 	<PropertyGroup>
 		<TargetFramework>net9.0</TargetFramework>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<AssemblyName>iconseditor.editor</AssemblyName>
-		<PackageId>iconseditor.editor</PackageId>
+		<AssemblyName>modeliconeditor</AssemblyName>
+		<PackageId>modeliconeditor</PackageId>
 		<LangVersion>13</LangVersion>
 		<NoWarn>1701;1702;1591;</NoWarn>
 		<WarningsAsErrors></WarningsAsErrors>
 		<TreatWarningsAsErrors>False</TreatWarningsAsErrors>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<DefineConstants>SANDBOX;ADDON;DEBUG</DefineConstants>
-		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<AllowUnsafeBlocks>False</AllowUnsafeBlocks>
 
 		<DesignTimeBuild Condition="'$(DesignTimeBuild)' == 'true'">true</DesignTimeBuild>
 	</PropertyGroup>
@@ -32,13 +32,14 @@
 
 
 	<ItemGroup>
-		<Using Include="Sandbox.Internal.GlobalToolsNamespace" Static="true" />
 		<Using Include="Sandbox.Internal.GlobalGameNamespace" Static="true" />
+		<Using Include="Microsoft.AspNetCore.Components" />
+		<Using Include="Microsoft.AspNetCore.Components.Rendering" />
 	</ItemGroup>
 
   <PropertyGroup>
 	<OutputPath>C:\Program Files (x86)\Steam\steamapps\common\sbox/.vs/output/</OutputPath>
-	<DocumentationFile>C:\Program Files (x86)\Steam\steamapps\common\sbox/.vs/output/iconseditor.editor.xml</DocumentationFile>
+	<DocumentationFile>C:\Program Files (x86)\Steam\steamapps\common\sbox/.vs/output/modeliconeditor.xml</DocumentationFile>
 	<RootNamespace>Sandbox</RootNamespace>
 	<Nullable>disable</Nullable>
   </PropertyGroup>
@@ -51,20 +52,10 @@
 		<Reference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\bin\managed/Sandbox.Filesystem.dll" />
 		<Reference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\bin\managed/Sandbox.Game.dll" />
 		<Reference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\bin\managed/Sandbox.Reflection.dll" />
-		<Reference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\bin\managed/Sandbox.Tools.dll" />
-		<Reference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\bin\managed/Sandbox.Compiling.dll" />
-		<Reference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\bin\managed/Microsoft.CodeAnalysis.dll" />
-		<Reference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\bin\managed/Sandbox.Bind.dll" />
-		<Reference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\bin\managed/Facepunch.ActionGraphs.dll" />
-		<Reference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\bin\managed/SkiaSharp.dll" />
 	</ItemGroup>
 
   <ItemGroup>
-		<ProjectReference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\editor\ActionGraph\Code\actiongraph.csproj" />
-		<ProjectReference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\editor\Hammer\Code\hammer.csproj" />
-		<ProjectReference Include="C:\Users\susan\Documents\GitHub\SLonePineRP\Libraries\IconsEditor\Code\iconseditor.csproj" />
-		<ProjectReference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\addons\tools\Code\Base Editor Library.csproj" />
-		<ProjectReference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\editor\ShaderGraph\Code\shadergraph.csproj" />
+		<ProjectReference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\addons\base\Code\Base Library.csproj" />
 
   </ItemGroup>
 
