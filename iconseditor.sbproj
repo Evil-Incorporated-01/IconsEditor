@@ -1,0 +1,13 @@
+{
+  "Title": "IconsEditor",
+  "Type": "library",
+  "Org": "evilinc",
+  "Ident": "iconseditor",
+  "Schema": 1,
+  "IncludeSourceFiles": false,
+  "Resources": null,
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "IsStandaloneOnly": false,
+  "Metadata": {}
+}
